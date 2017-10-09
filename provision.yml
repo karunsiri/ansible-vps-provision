@@ -16,5 +16,6 @@
     - common
     - user
     - postgres96
+    - nginx
     - docker
     - docker-compose

@@ -1,0 +1,12 @@
+- name: Add Nginx Repo
+  apt_repository:
+    repo: ppa:nginx/stable
+    state: present
+  register: ppastable
+
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: installed
+    update_cache: true
+  when: ppastable|success
