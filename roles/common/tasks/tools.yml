@@ -1,4 +1,17 @@
 ---
+- name: Add latest Vim repository
+  apt_repository:
+    repo: ppa:jonathonf/vim
+    state: present
+
+- name: Add Thoughtbot RCM repository
+  apt_repository:
+    repo: "deb http://apt.thoughtbot.com/debian/ stable main"
+
+- name: Add Thoughtbot RCM repository key
+  apt_key:
+    url: https://apt.thoughtbot.com/thoughtbot.gpg.key
+
 - name: Install Tools
   apt:
     name: "{{ item }}"
@@ -21,6 +34,7 @@
     - libxslt1-dev
     - libcurl4-openssl-dev
     - libffi-dev
+    - rcm
 
 - name: Install dependencies
   apt:
@@ -33,3 +47,4 @@
 - name: Install Python pip
   easy_install:
     name: pip
+
