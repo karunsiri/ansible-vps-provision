@@ -2,15 +2,15 @@
 - name: Gather facts
   setup:
 
-- name: Perform safe upgrade
-  apt:
-    upgrade: safe
-    update_cache: true
-
 - name: Set IPv4 as the precedence over IPv6
   lineinfile:
     path: /etc/gai.conf
     state: present
     line: "precedence ::ffff:0:0/96 100"
+
+- name: Perform safe upgrade
+  apt:
+    upgrade: safe
+    update_cache: true
 
 - include: tools.yml
