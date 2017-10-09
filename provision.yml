@@ -15,5 +15,6 @@
   roles:
     - common
     - user
+    - postgres96
     - docker
     - docker-compose
