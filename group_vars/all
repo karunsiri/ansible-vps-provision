@@ -1,0 +1,11 @@
+---
+timezone: Asia/Bangkok
+locale: en_US.UTF-8
+
+# Normal user, e.g., johnd
+username: SET_USERNAME_HERE
+
+# Authorized hosts
+# Will copy local public key files to provisioning servers
+ssh_public_keys:
+  - ~/.ssh/SET_PUBLIC_KEY_FILE_HERE

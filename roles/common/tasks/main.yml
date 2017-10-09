@@ -1,0 +1,10 @@
+---
+- name: Gather facts
+  setup:
+
+- name: Perform safe upgrade
+  apt:
+    upgrade: safe
+    update_cache: true
+
+- include: tools.yml

@@ -1,0 +1,24 @@
+---
+- name: Install Tools
+  apt:
+    name: "{{ item }}"
+    state: installed
+    update_cache: true
+  with_items:
+    - build-essential
+    - curl
+    - git
+    - vim
+    - htop
+
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    update_cache: true
+  with_items:
+    - python-dev
+    - python-setuptools
+
+- name: Install Python pip
+  easy_install:
+    name: pip
