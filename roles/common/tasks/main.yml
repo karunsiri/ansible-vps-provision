@@ -19,4 +19,4 @@
     upgrade: safe
     update_cache: true
 
-- include: tools.yml
+- include_tasks: tools.yml
