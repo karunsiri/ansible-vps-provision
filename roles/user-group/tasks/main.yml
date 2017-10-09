@@ -1,0 +1,6 @@
+---
+- name: Add admin group
+  group:
+    name: admin
+    state: present
+

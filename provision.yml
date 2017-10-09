@@ -6,6 +6,7 @@
   gather_facts: no
   roles:
     - common
+    - user-group
     - user
     - postgres96
     - nginx
