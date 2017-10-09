@@ -20,7 +20,6 @@
   with_items:
     - build-essential
     - python2.7
-    - aptitude
     - curl
     - git
     - vim

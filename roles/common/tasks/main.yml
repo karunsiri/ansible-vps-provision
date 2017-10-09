@@ -8,6 +8,12 @@
     state: present
     line: "precedence ::ffff:0:0/96 100"
 
+- name: Install aptitude
+  apt:
+    name: aptitude
+    state: installed
+    update_cache: true
+
 - name: Perform safe upgrade
   apt:
     upgrade: safe
