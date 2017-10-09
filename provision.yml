@@ -1,7 +1,6 @@
 ---
-- name: Deploy
-  hosts: web
-  remote_user: karun
+- name: Provision newly installed Debian based server
+  hosts: remote
   become: yes
   become_user: root
   gather_facts: no
