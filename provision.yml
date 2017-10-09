@@ -4,13 +4,6 @@
   become: yes
   become_user: root
   gather_facts: no
-  pre_tasks:
-    - name: apt-get update
-      raw: apt-get update -qq
-    - name: Install Python 2.7 and aptitude
-      raw: apt-get install -qqy python2.7 aptitude
-    - name: Set Python 2.7 as default
-      raw: update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
   roles:
     - common
     - user

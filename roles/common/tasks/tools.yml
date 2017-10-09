@@ -19,6 +19,8 @@
     update_cache: true
   with_items:
     - build-essential
+    - python2.7
+    - aptitude
     - curl
     - git
     - vim
@@ -35,6 +37,9 @@
     - libcurl4-openssl-dev
     - libffi-dev
     - rcm
+
+- name: Set Python 2.7 as default
+  raw: update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
 
 - name: Install dependencies
   apt:
