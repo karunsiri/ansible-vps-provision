@@ -10,3 +10,9 @@
     state: installed
     update_cache: true
   when: ppastable|success
+
+- name: Ensure Nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
