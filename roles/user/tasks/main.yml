@@ -2,6 +2,7 @@
 - name: Add normal user
   user:
     name: "{{ username }}"
+    password: "{{ user_password|password_hash('sha512') }}"
     shell: /bin/bash
     group: admin
     generate_ssh_key: yes

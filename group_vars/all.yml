@@ -2,8 +2,11 @@
 timezone: Asia/Bangkok
 locale: en_US.UTF-8
 
-# Normal user, e.g., johnd
+# Normal users, e.g., johnd
 username: SET_USERNAME_HERE
+
+# Password of a user
+user_password: SET_PASSWORD_HERE
 
 # Authorized hosts
 # Copies local public key files to provisioning servers for passwordless login
