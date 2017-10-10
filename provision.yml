@@ -8,5 +8,7 @@
     - common
     - user-group
     - user
-    - postgres96
-    - nginx
+    # - postgres96
+    # - nginx
+    # - docker
+    # - docker-compose

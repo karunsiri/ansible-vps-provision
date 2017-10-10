@@ -6,6 +6,6 @@ locale: en_US.UTF-8
 username: SET_USERNAME_HERE
 
 # Authorized hosts
-# Will copy local public key files to provisioning servers
+# Copies local public key files to provisioning servers for passwordless login
 ssh_public_keys:
   - ~/.ssh/SET_PUBLIC_KEY_FILE_HERE
