@@ -1,0 +1,27 @@
+---
+- name: Checkout dotfiles from github:karunsiri/dotfiles
+  git:
+    repo: "https://github.com/karunsiri/dotfiles.git"
+    version: master
+    dest: "~/.dotfiles/"
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Sync dotfiles using rcup
+  shell: RCRC=$HOME/.dotfiles/rcrc rcup
+  args:
+    executable: /bin/bash
+  become: yes
+  become_user: "{{ username }}"
+  register: rcup_status
+
+- name: Add aliases line to .bashrc
+  lineinfile:
+    path: "~/.bashrc"
+    state: present
+    line: "[[ -f ~/.aliases ]] && source ~/.aliases"
+  become: yes
+  become_user: "{{ username }}"
+  when: rcup_status.rc == 0
+
+
