@@ -16,3 +16,9 @@
     state: installed
     update_cache: true
   when: pg_repo_key | success
+
+- name: Ensure Postgresql 9.6 is running
+  service:
+    name: postgresql
+    state: started
+    enabled: yes
