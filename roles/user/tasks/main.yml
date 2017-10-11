@@ -15,6 +15,3 @@
     state: present
     key: "{{ lookup('file', item) }}"
   with_items: "{{ ssh_public_keys }}"
-
-# Will include dotfiles for more useful Vim, Git aliases, and shell aliasses
-- include_tasks: dotfiles.yml

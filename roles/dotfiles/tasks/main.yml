@@ -1,4 +1,5 @@
 ---
+# Will include dotfiles for more useful Vim, Git aliases, and shell aliasses
 - name: Checkout dotfiles from github:karunsiri/dotfiles
   git:
     repo: "https://github.com/karunsiri/dotfiles.git"
